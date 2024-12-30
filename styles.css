@@ -1,0 +1,269 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #EE9CA7, #FFDDE1);
+  color: #333333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(to right, #662D8C, #ED1E79);
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #ffffff;
+  margin-bottom: 4px;
+  border-radius: 5px;
+}
+
+/* Main Content Styles */
+main {
+  flex-grow: 1;
+  padding: 40px 0;
+}
+
+#calculator {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #662D8C, #ED1E79);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Semester Container */
+.semester {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.semester-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background: linear-gradient(to right, #614385, #516395);
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+table td input, table td select {
+  width: 90%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success {
+  color: #198754;
+  border: 1px solid #198754;
+  background-color: transparent;
+}
+
+.btn-outline-success:hover {
+  background-color: #198754;
+  color: white;
+}
+
+.btn-outline-danger {
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.add-subject-btn, .add-semester-btn {
+  margin-top: 15px;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(to right, #662D8C, #ED1E79);
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  main {
+    padding: 20px 0;
+  }
+
+  #calculator {
+    padding: 20px;
+  }
+
+  .semester-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .semester-header button {
+    margin-top: 10px;
+  }
+
+  table th, table td {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav ul li {
+    margin-left: 10px;
+  }
+
+  .gradient-text {
+    font-size: 24px;
+  }
+
+  #calculator {
+    padding: 20px;
+  }
+
+  .semester {
+    padding: 15px;
+  }
+
+  table th, table td {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .btn {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+}

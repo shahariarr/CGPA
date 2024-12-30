@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGPA Calculator BD</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CGPA Calculator BD</h1>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#calculator">Calculator</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h2>CGPA Calculator BD</h2>
+      <p>CGPA Calculator is an innovative calculator to calculate GPA or CGPA online. It’s very easy to calculate any semester or year wise GPA and CGPA.</p>
+    </div>
+  </section>
+
+  <!-- CGPA Grading System Section -->
+  <section id="grading-system">
+    <div class="container">
+      <h2>CGPA Grading System</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Grade</th>
+            <th>Point</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>80% and above</td><td>A+</td><td>4.00</td></tr>
+          <tr><td>75% to less than 80%</td><td>A</td><td>3.75</td></tr>
+          <tr><td>70% to less than 75%</td><td>A-</td><td>3.50</td></tr>
+          <tr><td>65% to less than 70%</td><td>B+</td><td>3.25</td></tr>
+          <tr><td>60% to less than 65%</td><td>B</td><td>3.00</td></tr>
+          <tr><td>55% to less than 60%</td><td>B-</td><td>2.75</td></tr>
+          <tr><td>50% to less than 55%</td><td>C+</td><td>2.50</td></tr>
+          <tr><td>45% to less than 50%</td><td>C</td><td>2.25</td></tr>
+          <tr><td>40% to less than 45%</td><td>D</td><td>2.00</td></tr>
+          <tr><td>Less than 40%</td><td>F</td><td>0.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <div id="calculator">
+        <h2 class="gradient-text">CGPA Calculator</h2>
+        <h3>Overall CGPA: <span id="cgpa">0.00</span></h3>
+        <div class="semester" id="semester-1">
+          <div class="semester-header">
+            <h3>Semester 1</h3>
+            <button class="btn btn-outline-danger" onclick="removeSemester(1)">Remove Semester</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Subject Name</th>
+                <th>Grade</th>
+                <th>Credits</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody class="subject-list"></tbody>
+          </table>
+          <button class="btn btn-outline-success add-subject-btn" onclick="addSubject(1)">Add Subject</button>
+          <p>Semester 1 GPA: <span id="gpa-1">0.00</span></p>
+        </div>
+        <button class="btn btn-outline-success add-semester-btn" onclick="addSemester()">Add Next Semester</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Additional Information Section -->
+  <section id="additional-info">
+    <div class="container">
+      <h2>CGPA Calculator</h2>
+      <p>Calculating CGPA depends on Every Semester GPA. Semester GPA Calculate by Grade Points and Credit. It’s very easy to calculate CGPA online and here you can find your GPA/CGPA easily. You need your grade or grade points and Credit. If you have these credentials you can easily calculate your CGPA from this online GPA Calculator.</p>
+      <p>By using this Online CGPA calculator you will find your semester GPA and overall CGPA. If you need to add more subject you can click on Add Subject button and if you need to add Semester then you can click on Add Next Semester Button.</p>
+      <h2>How to Use</h2>
+      <p>CGPA Calculator is easy to use. You can calculate your GPA or CGPA semester wise or year wise. First, you need to calculate your 1st Year or Semester GPA then you can repeat for next year or semester.</p>
+      <h2>Follow the Steps to calculate CGPA</h2>
+      <ul>
+        <li>Add Subject Name</li>
+        <li>Select Grade</li>
+        <li>Enter your Credits</li>
+        <li>And finally, you will get your GPA and Overall CGPA</li>
+      </ul>
+      <p>If you need to add more subject then you should click on the “Add Subject” button and if you want to calculate next year or semester CGPA then simply click on “Add Next Semester” Button.</p>
+      <p>You can add as many Subjects/Semester as you want.</p>
+      <h2>CGPA Meaning</h2>
+      <p>CGPA Full Meaning is a Cumulative Grade Point Average.</p>
+      <p>Cumulative Grade Point Average is a Bangladesh higher educational grading system. It is used for colleges to measure the overall academic performance of a student for Year and the Total Course. Student’s results should be with grades (A, B, C, D, or F).I hope you got how to calculate CGPA. With this website easily find your educational performance and your GPA/CGPA. If you have input your Grade Point and Credit correctly you will see your Semester GPA and CGPA.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 CGPA Calculator. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
