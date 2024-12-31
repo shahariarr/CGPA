@@ -70,6 +70,7 @@
           <div class="semester-header">
             <h3>Semester 1</h3>
             <button class="btn btn-outline-danger" onclick="removeSemester(1)">Remove Semester</button>
+            <button class="btn btn-outline-success" onclick="previewSemester(1)">Preview</button>
           </div>
           <table>
             <thead>
@@ -86,9 +87,30 @@
           <p>Semester 1 GPA: <span id="gpa-1">0.00</span></p>
         </div>
         <button class="btn btn-outline-success add-semester-btn" onclick="addSemester()">Add Next Semester</button>
+        <button class="btn btn-outline-success preview-all-btn" onclick="previewAllSemesters()">Preview All Semesters</button>
       </div>
     </div>
   </main>
+    <!-- Modal Structure -->
+    <div id="previewModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Semester Results</h2>
+        <div id="modal-body"></div>
+        <button class="btn btn-outline-success" onclick="downloadResults()">Download Results</button>
+
+      </div>
+    </div>
+
+       
+        <div id="previewModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Total Results</h2>
+            <div id="modal-body"></div>
+            <button class="btn btn-outline-success" onclick="downloadResults()">Download Results</button>
+          </div>
+        </div>
 
   <!-- Additional Information Section -->
   <section id="additional-info">
@@ -118,6 +140,7 @@
       <p>&copy; 2024 CGPA Calculator. All rights reserved.</p>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
   <script src="script.js"></script>
   <script>
